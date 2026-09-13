@@ -3,7 +3,7 @@ const programs = [
   {
     badge: "Grades 8 – 9",
     title: "Middle School Foundation",
-    subtitle: "Building intuition and conceptual depth early so high school feels natural.",
+    subtitle: "Building strong fundamentals early so high school science and maths feel effortless.",
     subjects: ["Mathematics", "Science (Physics, Chem, Bio)"],
     features: [
       "Intuitive fundamental concepts & visual proofs",
@@ -15,8 +15,8 @@ const programs = [
   {
     badge: "Grade 10",
     title: "Secondary Board Prep",
-    subtitle: "High-yield preparation targeted specifically for Board distinctions.",
-    subjects: ["Mathematics", "Science (PCM)", "Board Exam Strategy"],
+    subtitle: "High-yield preparation targeted specifically for Board exam distinctions.",
+    subjects: ["Mathematics", "Science (Phy, Chem, Bio)", "Board Exam Strategy"],
     features: [
       "Full Board syllabus completion well ahead of finals",
       "Previous 10-year question bank analysis & marking schemes",
@@ -26,36 +26,48 @@ const programs = [
   },
   {
     badge: "Grades 11 – 12",
-    title: "Senior Secondary Mastery",
-    subtitle: "Deep conceptual rigor for Board exams & competitive foundations.",
-    subjects: ["Physics", "Chemistry", "Mathematics"],
+    title: "Senior Science (PCMB)",
+    subtitle: "Rigor for Board distinctions and strong fundamentals for NEET & JEE.",
+    subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
     features: [
-      "Rigorous concept breakdown with real-world applications",
-      "Numerical problem-solving focus & derivation clarity",
-      "Chapter-wise revision notes & formula guides",
-      "Continuous doubt support & mentor check-ins"
+      "Derivation clarity & numerical mastery in Physics & Chem",
+      "NCERT line-by-line clarity & biological diagram practice",
+      "Chapter-wise revision notes & high-yield formula guides",
+      "Weekly timed tests & 1-on-1 doubt solving with mentors"
+    ]
+  },
+  {
+    badge: "Grades 11 – 12",
+    title: "Senior Commerce",
+    subtitle: "Complete conceptual mastery for top marks in Board Commerce finals.",
+    subjects: ["Accountancy", "Economics", "Business Studies", "Mathematics"],
+    features: [
+      "Step-by-step balance sheet, ledger & cash-flow clarity",
+      "Micro & Macroeconomics graph explanations and formulas",
+      "Structured case study analysis & answer presentation",
+      "Weekly board pattern tests & mentor performance checks"
     ]
   }
 ];
 ---
 
 <section id="programs" class="py-20 md:py-28 border-t border-[#00D8FF]/15 bg-[#0A1142]">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <!-- Header -->
     <div class="text-center max-w-2xl mx-auto mb-16">
       <span class="text-xs font-mono uppercase tracking-widest text-[#00D8FF] font-semibold mb-3 block">
         Curriculum & Batches
       </span>
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-        Structured Programs for Every Academic Stage.
+        Structured Programs for Every Stream.
       </h2>
       <p class="text-cyan-100/75 text-sm sm:text-base">
-        Aligned with ICSE, CBSE, and State Board standards to ensure top marks in school and board exams.
+        Aligned with ICSE/ISC, CBSE, and State Board standards across Foundation, Board Prep, Science (PCMB), and Commerce.
       </p>
     </div>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Cards Grid (4 columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {programs.map((prog) => (
         <div class="rounded-3xl border border-[#00D8FF]/15 bg-[#0d164d]/75 backdrop-blur-xl hover:border-[#00D8FF]/45 hover:bg-[#101c5f]/90 p-8 flex flex-col justify-between relative transition-all group shadow-[0_8px_30px_rgba(26,54,141,0.25)]">
           <div>

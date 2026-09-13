@@ -7,13 +7,19 @@ const reviews = [
     highlight: "Scored 96% in Boards"
   },
   {
-    quote: "The individual doubt clearing made all the difference. In school, teachers rush to complete the syllabus, but here every concept is explained until you are 100% clear.",
+    quote: "The individual doubt clearing made all the difference. Complex Physics, Chemistry, and Biology concepts were explained with first principles until I was completely exam-ready.",
     student: "Riya M.",
-    tag: "Class 12 CBSE • 94% in PCM",
-    highlight: "94% in Science Stream"
+    tag: "Class 12 CBSE • 95% in Science (PCMB)",
+    highlight: "95% in Science Stream"
   },
   {
-    quote: "Having access to the dedicated student app to monitor daily attendance and test marks, combined with direct WhatsApp feedback from Suraj Sir & Dhiraj Sir, gives me complete peace of mind. You can clearly see the score leap month after month.",
+    quote: "Accountancy and Economics balance sheets used to be confusing, but Suraj Sir and Dhiraj Sir made every financial statement intuitive. Scored 94% in my board finals!",
+    student: "Kunal D.",
+    tag: "Class 12 • 94% in Commerce",
+    highlight: "94% in Commerce Stream"
+  },
+  {
+    quote: "Having access to the dedicated student app to monitor daily attendance and test marks, combined with direct WhatsApp feedback from Suraj Sir & Dhiraj Sir, gives me complete peace of mind.",
     student: "Sanjay K. (Parent)",
     tag: "Parent of Class 9 Student",
     highlight: "Jumped from 68% to 89%"
@@ -22,7 +28,7 @@ const reviews = [
 ---
 
 <section id="results" class="py-20 md:py-28 relative">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <!-- Header -->
     <div class="text-center max-w-2xl mx-auto mb-16">
       <span class="text-xs font-mono uppercase tracking-widest text-[#00D8FF] font-semibold mb-3 block">
@@ -33,12 +39,12 @@ const reviews = [
         Documented Results.
       </h2>
       <p class="text-cyan-100/75 text-sm sm:text-base">
-        Hear directly from students and parents who upgraded their confidence and board scores with us.
+        Hear directly from students and parents across Class 10, Science (PCMB), and Commerce who upgraded their confidence.
       </p>
     </div>
 
-    <!-- Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Cards (4 columns) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {reviews.map((r) => (
         <div class="rounded-3xl border border-[#00D8FF]/15 bg-[#0d164d]/75 backdrop-blur-xl p-8 flex flex-col justify-between hover:border-[#00D8FF]/40 transition-all relative shadow-[0_8px_30px_rgba(26,54,141,0.25)]">
           <div>
