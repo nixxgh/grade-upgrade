@@ -10,8 +10,11 @@ const academicYear = getAcademicYear();
   <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[220px] bg-gradient-to-r from-[#00D8FF]/15 to-[#1A368D]/35 blur-[100px] pointer-events-none -z-10"></div>
 
   <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-    <!-- Dynamic Pill Announcement Badge -->
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#00D8FF]/30 bg-[#1A368D]/40 backdrop-blur-md mb-8 hover:border-[#00D8FF]/60 transition-all cursor-pointer group shadow-[0_0_15px_rgba(0,216,255,0.15)]">
+    <!-- Dynamic Pill Announcement Badge (Clickable Anchor) -->
+    <a 
+      href="#inquire" 
+      class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#00D8FF]/30 bg-[#1A368D]/40 backdrop-blur-md mb-8 hover:border-[#00D8FF]/70 hover:bg-[#1A368D]/60 transition-all cursor-pointer group shadow-[0_0_15px_rgba(0,216,255,0.15)] hover:shadow-[0_0_25px_rgba(0,216,255,0.35)]"
+    >
       <span class="flex h-2 w-2 rounded-full bg-[#00D8FF] animate-pulse"></span>
       <span class="text-xs sm:text-sm font-medium text-cyan-100">
         Suraj Sir's & Dhiraj Sir's • Admissions Open for <span class="text-[#00D8FF] font-bold">{academicYear}</span>
@@ -19,7 +22,7 @@ const academicYear = getAcademicYear();
       <svg class="w-3.5 h-3.5 text-[#00D8FF]/80 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
-    </div>
+    </a>
 
     <!-- Main Headline with Vercel Gradient & Brand Accents -->
     <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
