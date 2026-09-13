@@ -1,0 +1,77 @@
+---
+const faqs = [
+  {
+    q: "Which boards and classes do you cater to?",
+    a: "We provide comprehensive coaching for students in Grades 8 through 12 across ICSE, CBSE, and State Board curriculums. Our primary focus areas include Mathematics, Science (Physics, Chemistry, Biology), and senior secondary PCM."
+  },
+  {
+    q: "Do you offer a free demo class before enrolling?",
+    a: "Yes! We believe every student should experience our teaching methodology firsthand. You can book a free, no-obligation trial lecture to see how we teach and interact with our faculty."
+  },
+  {
+    q: "What makes Grade Upgrade different from large coaching institutes?",
+    a: "Unlike massive coaching factories with 80+ students per lecture, we maintain strictly focused batch sizes where every student receives personal attention. We focus on concept mastery rather than forcing students to memorize question banks."
+  },
+  {
+    q: "How do you handle student doubts?",
+    a: "We have dedicated doubt-clearing hours after regular lectures. Students can sit 1-on-1 with mentors to resolve homework doubts, review test mistakes, or understand challenging derivation steps."
+  },
+  {
+    q: "How can parents track student progress?",
+    a: "We conduct weekly mock tests modeled after board exam patterns. Answer papers are reviewed and detailed marks reports are shared directly with parents via WhatsApp alongside regular parent-teacher feedback sessions."
+  }
+];
+
+// Generate FAQPage JSON-LD schema for Google rich snippets
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+};
+---
+
+<section id="faq" class="py-20 md:py-28 border-t border-[#00D8FF]/15 bg-[#0A1142]">
+  <!-- Injected FAQPage Schema for Google Rich Snippets -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono uppercase tracking-widest text-[#00D8FF] font-semibold mb-3 block">
+        Frequently Asked Questions
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        Everything You Need to Know.
+      </h2>
+      <p class="text-cyan-100/75 text-sm sm:text-base">
+        Clear answers about our teaching philosophy, batch schedules, and enrollment process.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group rounded-2xl border border-[#00D8FF]/15 bg-[#0d164d]/75 backdrop-blur-xl p-6 transition-all hover:border-[#00D8FF]/40 shadow-[0_4px_20px_rgba(26,54,141,0.2)] [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold text-white text-base sm:text-lg group-hover:text-[#00D8FF] transition-colors">
+            <span>{faq.q}</span>
+            <span class="shrink-0 transition duration-300 group-open:-rotate-180 text-[#00D8FF]">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-[#00D8FF]/15 text-cyan-100/80 text-sm sm:text-base leading-relaxed">
+            {faq.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

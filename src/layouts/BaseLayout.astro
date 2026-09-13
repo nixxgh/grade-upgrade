@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = "Grade Upgrade — Concept-first coaching and tuition for ICSE, CBSE & State Board students in Grades 8 to 12. Book a free demo class today.",
+  canonicalUrl = Astro.url.href,
+  ogImage = "/og-image.png"
+} = Astro.props;
+
+// Google Analytics 4 (GA4) & Google Search Console (GSC) Verification
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_ID;
+const GSC_VERIFICATION = import.meta.env.PUBLIC_GSC_VERIFICATION;
+
+// Schema.org EducationalOrganization structured data
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Grade Upgrade",
+  "description": description,
+  "url": canonicalUrl,
+  "sameAs": [
+    "https://www.instagram.com/grade_upgrade"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Search Console Ownership Verification -->
+    {GSC_VERIFICATION && (
+      <meta name="google-site-verification" content={GSC_VERIFICATION} />
+    )}
+
+    <!-- EducationalOrganization JSON-LD Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+    <!-- Google Analytics (GA4) -->
+    {GA_MEASUREMENT_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+        <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', GA_MEASUREMENT_ID);
+        </script>
+      </>
+    )}
+  </head>
+  <body class="bg-[#0A1142] text-white min-h-screen flex flex-col antialiased selection:bg-[#00D8FF]/30 selection:text-[#00D8FF]">
+    <slot />
+  </body>
+</html>
