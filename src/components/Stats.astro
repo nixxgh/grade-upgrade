@@ -1,25 +1,25 @@
 ---
 const stats = [
   {
-    value: "98%",
-    label: "Board Exam Distinction Rate",
-    description: "Consistent 90%+ scores in Board Finals"
+    value: '98%',
+    label: 'Board Exam Distinction Rate',
+    description: 'Consistent 90%+ scores in Board Finals',
   },
   {
-    value: "+25%",
-    label: "Average Score Leap",
-    description: "Recorded within the first 3 months"
+    value: '+25%',
+    label: 'Average Score Leap',
+    description: 'Recorded within the first 3 months',
   },
   {
-    value: "1-on-1",
-    label: "Doubt Solving Mentorship",
-    description: "Dedicated slots outside regular lectures"
+    value: '1-on-1',
+    label: 'Doubt Solving Mentorship',
+    description: 'Dedicated slots outside regular lectures',
   },
   {
-    value: "Focused",
-    label: "Small Batch Environment",
-    description: "Ensuring individual teacher attention"
-  }
+    value: 'Focused',
+    label: 'Small Batch Environment',
+    description: 'Ensuring individual teacher attention',
+  },
 ];
 ---
 
@@ -27,7 +27,9 @@ const stats = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-[#00D8FF]/15">
       {stats.map((stat, index) => (
-        <div class={`flex flex-col ${index !== 0 ? 'pt-6 md:pt-0 md:pl-8' : ''}`}>
+        <div
+          class={`flex flex-col ${index !== 0 ? 'pt-6 md:pt-0 md:pl-8' : ''}`}
+        >
           <span class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-1.5 font-mono bg-gradient-to-r from-white via-cyan-100 to-[#00D8FF] bg-clip-text text-transparent">
             {stat.value}
           </span>

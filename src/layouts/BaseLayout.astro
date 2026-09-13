@@ -10,9 +10,9 @@ interface Props {
 
 const {
   title,
-  description = "Grade Upgrade — Concept-first coaching and tuition for ICSE, CBSE & State Board students in Grades 8 to 12. Book a free demo class today.",
+  description = 'Grade Upgrade — Concept-first coaching and tuition for ICSE, CBSE & State Board students in Grades 8 to 12. Book a free demo class today.',
   canonicalUrl = Astro.url.href,
-  ogImage = "/og-image.png"
+  ogImage = '/og-image.png',
 } = Astro.props;
 
 // Google Analytics 4 (GA4) & Google Search Console (GSC) Verification
@@ -21,29 +21,28 @@ const GSC_VERIFICATION = import.meta.env.PUBLIC_GSC_VERIFICATION;
 
 // Schema.org EducationalOrganization structured data
 const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Grade UPgrade",
-  "alternateName": "Grade Upgrade Coaching Institute",
-  "description": description,
-  "url": canonicalUrl,
-  "telephone": "+919004452071",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Group No 1, Shop No. 234, Gurudarshan CHSL, opp. Municipal School, Tagore Nagar",
-    "addressLocality": "Vikhroli East, Mumbai",
-    "addressRegion": "Maharashtra",
-    "postalCode": "400083",
-    "addressCountry": "IN"
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Grade UPgrade',
+  alternateName: 'Grade Upgrade Coaching Institute',
+  description: description,
+  url: canonicalUrl,
+  telephone: '+919004452071',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress:
+      'Group No 1, Shop No. 234, Gurudarshan CHSL, opp. Municipal School, Tagore Nagar',
+    addressLocality: 'Vikhroli East, Mumbai',
+    addressRegion: 'Maharashtra',
+    postalCode: '400083',
+    addressCountry: 'IN',
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "129"
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '129',
   },
-  "sameAs": [
-    "https://www.instagram.com/grade_upgrade"
-  ]
+  sameAs: ['https://www.instagram.com/grade_upgrade'],
 };
 ---
 
@@ -83,15 +82,22 @@ const organizationSchema = {
     )}
 
     <!-- EducationalOrganization JSON-LD Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(organizationSchema)}
+    ></script>
     <!-- Google Analytics (GA4) -->
     {GA_MEASUREMENT_ID && (
       <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        ></script>
         <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag() {
+            dataLayer.push(arguments);
+          }
           gtag('js', new Date());
           gtag('config', GA_MEASUREMENT_ID);
         </script>

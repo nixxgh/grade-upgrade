@@ -1,61 +1,72 @@
 ---
 const programs = [
   {
-    badge: "Grades 8 – 9",
-    title: "Middle School Foundation",
-    gradeValue: "Class 9",
-    subtitle: "Building strong fundamentals early so high school science and maths feel effortless.",
-    subjects: ["Mathematics", "Science (Physics, Chem, Bio)"],
+    badge: 'Grades 8 – 9',
+    title: 'Middle School Foundation',
+    gradeValue: 'Class 9',
+    subtitle:
+      'Building strong fundamentals early so high school science and maths feel effortless.',
+    subjects: ['Mathematics', 'Science (Physics, Chem, Bio)'],
     features: [
-      "Intuitive fundamental concepts & visual proofs",
-      "School syllabus pacing & continuous homework review",
-      "Bi-weekly test series with personalized feedback",
-      "Confidence building in multi-step problem solving"
-    ]
+      'Intuitive fundamental concepts & visual proofs',
+      'School syllabus pacing & continuous homework review',
+      'Bi-weekly test series with personalized feedback',
+      'Confidence building in multi-step problem solving',
+    ],
   },
   {
-    badge: "Grade 10",
-    title: "Secondary Board Prep",
-    gradeValue: "Class 10",
-    subtitle: "High-yield preparation targeted specifically for Board exam distinctions.",
-    subjects: ["Mathematics", "Science (Phy, Chem, Bio)", "Board Exam Strategy"],
+    badge: 'Grade 10',
+    title: 'Secondary Board Prep',
+    gradeValue: 'Class 10',
+    subtitle:
+      'High-yield preparation targeted specifically for Board exam distinctions.',
+    subjects: [
+      'Mathematics',
+      'Science (Phy, Chem, Bio)',
+      'Board Exam Strategy',
+    ],
     features: [
-      "Full Board syllabus completion well ahead of finals",
-      "Previous 10-year question bank analysis & marking schemes",
-      "Weekly full-length timed mock exams under exam conditions",
-      "Dedicated 1-on-1 answer sheet presentation review"
-    ]
+      'Full Board syllabus completion well ahead of finals',
+      'Previous 10-year question bank analysis & marking schemes',
+      'Weekly full-length timed mock exams under exam conditions',
+      'Dedicated 1-on-1 answer sheet presentation review',
+    ],
   },
   {
-    badge: "Grades 11 – 12",
-    title: "Senior Science (PCMB)",
-    gradeValue: "Class 11",
-    subtitle: "Rigor for Board distinctions and strong fundamentals for NEET & JEE.",
-    subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
+    badge: 'Grades 11 – 12',
+    title: 'Senior Science (PCMB)',
+    gradeValue: 'Class 11',
+    subtitle:
+      'Rigor for Board distinctions and strong fundamentals for NEET & JEE.',
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
     features: [
-      "Derivation clarity & numerical mastery in Physics & Chem",
-      "NCERT line-by-line clarity & biological diagram practice",
-      "Chapter-wise revision notes & high-yield formula guides",
-      "Weekly timed tests & 1-on-1 doubt solving with mentors"
-    ]
+      'Derivation clarity & numerical mastery in Physics & Chem',
+      'NCERT line-by-line clarity & biological diagram practice',
+      'Chapter-wise revision notes & high-yield formula guides',
+      'Weekly timed tests & 1-on-1 doubt solving with mentors',
+    ],
   },
   {
-    badge: "Grades 11 – 12",
-    title: "Senior Commerce",
-    gradeValue: "Class 12",
-    subtitle: "Complete conceptual mastery for top marks in Board Commerce finals.",
-    subjects: ["Accountancy", "Economics", "Business Studies", "Mathematics"],
+    badge: 'Grades 11 – 12',
+    title: 'Senior Commerce',
+    gradeValue: 'Class 12',
+    subtitle:
+      'Complete conceptual mastery for top marks in Board Commerce finals.',
+    subjects: ['Accountancy', 'Economics', 'Business Studies', 'Mathematics'],
     features: [
-      "Step-by-step balance sheet, ledger & cash-flow clarity",
-      "Micro & Macroeconomics graph explanations and formulas",
-      "Structured case study analysis & answer presentation",
-      "Weekly board pattern tests & mentor performance checks"
-    ]
-  }
+      'Step-by-step balance sheet, ledger & cash-flow clarity',
+      'Micro & Macroeconomics graph explanations and formulas',
+      'Structured case study analysis & answer presentation',
+      'Weekly board pattern tests & mentor performance checks',
+    ],
+  },
 ];
 ---
 
-<section id="programs" class="py-20 md:py-28 border-t border-[#00D8FF]/15 bg-[#0A1142]">
+<section
+  id="programs"
+  class="py-20 md:py-28 border-t border-[#00D8FF]/15 bg-[#0A1142]"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <!-- Header -->
     <div class="text-center max-w-2xl mx-auto mb-16">
@@ -66,7 +77,8 @@ const programs = [
         Structured Programs for Every Stream.
       </h2>
       <p class="text-cyan-100/75 text-sm sm:text-base">
-        Aligned with ICSE/ISC, CBSE, and State Board standards across Foundation, Board Prep, Science (PCMB), and Commerce.
+        Aligned with ICSE/ISC, CBSE, and State Board standards across
+        Foundation, Board Prep, Science (PCMB), and Commerce.
       </p>
     </div>
 
@@ -88,9 +100,11 @@ const programs = [
             </p>
 
             <div class="mb-6 pb-6 border-b border-[#00D8FF]/15">
-              <span class="text-[11px] font-mono text-cyan-200/60 uppercase tracking-wider block mb-2">Subjects Covered</span>
+              <span class="text-[11px] font-mono text-cyan-200/60 uppercase tracking-wider block mb-2">
+                Subjects Covered
+              </span>
               <div class="flex flex-wrap gap-1.5">
-                {prog.subjects.map(s => (
+                {prog.subjects.map((s) => (
                   <span class="text-xs px-2.5 py-1 rounded-full bg-[#1A368D]/40 text-cyan-100 border border-[#00D8FF]/20">
                     {s}
                   </span>
@@ -100,10 +114,20 @@ const programs = [
 
             <!-- Deliverables -->
             <ul class="space-y-3 mb-8">
-              {prog.features.map(f => (
+              {prog.features.map((f) => (
                 <li class="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-200">
-                  <svg class="w-4 h-4 text-[#00D8FF] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  <svg
+                    class="w-4 h-4 text-[#00D8FF] shrink-0 mt-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <span>{f}</span>
                 </li>
@@ -111,8 +135,8 @@ const programs = [
             </ul>
           </div>
 
-          <a 
-            href="#inquire" 
+          <a
+            href="#inquire"
             data-select-grade={prog.gradeValue}
             class="course-inquire-btn w-full py-3 rounded-full text-center text-sm font-bold bg-[#1A368D]/50 text-white hover:bg-[#00D8FF] hover:text-[#0A1142] border border-[#00D8FF]/30 hover:border-transparent transition-all shadow-[0_0_15px_rgba(26,54,141,0.3)] hover:shadow-[0_0_25px_rgba(0,216,255,0.6)] active:scale-[0.99]"
           >
