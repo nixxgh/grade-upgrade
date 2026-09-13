@@ -1,5 +1,5 @@
 {
-  description = "Astro + Tailwind Web Project Template";
+  description = "Grade UPgrade Coaching Institute Web Platform";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,15 +12,14 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShells.default = pkgs.mkShell {
-          name = "web-template-shell";
+          name = "grade-upgrade-shell";
           packages = with pkgs; [
             nodejs_22
-            nodePackages.pnpm
           ];
 
           shellHook = ''
-            echo "🚀 Astro + Web Development Environment Loaded"
-            echo "Node.js: $(node -v) | pnpm: $(pnpm -v 2>/dev/null || echo 'installed')"
+            echo "🚀 Grade UPgrade Development Environment Loaded"
+            echo "Node.js: $(node -v) | npm: $(npm -v 2>/dev/null || echo 'installed')"
           '';
         };
       }

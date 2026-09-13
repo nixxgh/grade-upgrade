@@ -56,8 +56,9 @@ npm run build
 grade-upgrade/
 ├── public/
 │   ├── favicon.ico
-│   ├── favicon.png
-│   └── logo.png              # 512x512 transparent brand logo
+│   ├── favicon.svg
+│   ├── logo.webp             # 80x80 (2x Retina) WebP brand logo
+│   └── logo-40.webp          # 40x40 (1x) WebP brand logo
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.astro           # Sticky navigation with admission badge
