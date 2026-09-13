@@ -6,19 +6,19 @@ A high-performance, concept-first landing page and admissions portal for **Grade
 
 ## 🌟 Overview & Features
 
-* ⚡ **Ultra-Fast & Zero-JS Core**: Built on Astro for high Lighthouse scores, instant mobile load times, and minimal client-side bundle size.
-* 🎓 **Comprehensive Curricula Showcase**:
-  * **Class 8 – 10**: Foundation & Board prep for ICSE, CBSE, and Maharashtra State Board.
-  * **Class 11 – 12 (Science)**: Physics, Chemistry, Mathematics & Biology (PCMB) with board & competitive exam focus.
-  * **Class 11 – 12 (Commerce)**: Accountancy, Economics, OCM, SP, and Mathematics.
-* 📍 **Verified Campus & Interactive Google Maps**:
-  * Verified Google Business Profile (4.9 ★★★★★ with 129+ reviews).
-  * Main Campus: Shop No. 234, Gurudarshan CHSL, Tagore Nagar, Vikhroli East, Mumbai - 400083.
-  * Interactive embedded Google Map iframe with mobile one-tap directions.
-* 💬 **Direct WhatsApp Lead Automation**: Pre-filled admissions inquiry generator and direct call integration (`+91 90044 52071`).
-* 📱 **Dedicated Student App Showcase**: Highlighting live attendance and test mark tracking features.
-* 🎨 **Bespoke Design System**: Custom dark-navy `#0A1142` and electric cyan `#00D8FF` palette inspired by modern Vercel-grade aesthetics.
-* ❄️ **Reproducible Nix DevShell**: Fully isolated development environment with Node.js 22 via `flake.nix`.
+- ⚡ **Ultra-Fast & Zero-JS Core**: Built on Astro for high Lighthouse scores, instant mobile load times, and minimal client-side bundle size.
+- 🎓 **Comprehensive Curricula Showcase**:
+  - **Class 8 – 10**: Foundation & Board prep for ICSE, CBSE, and Maharashtra State Board.
+  - **Class 11 – 12 (Science)**: Physics, Chemistry, Mathematics & Biology (PCMB) with board & competitive exam focus.
+  - **Class 11 – 12 (Commerce)**: Accountancy, Economics, OCM, SP, and Mathematics.
+- 📍 **Verified Campus & Interactive Google Maps**:
+  - Verified Google Business Profile (4.9 ★★★★★ with 129+ reviews).
+  - Main Campus: Shop No. 234, Gurudarshan CHSL, Tagore Nagar, Vikhroli East, Mumbai - 400083.
+  - Interactive embedded Google Map iframe with mobile one-tap directions.
+- 💬 **Direct WhatsApp Lead Automation**: Pre-filled admissions inquiry generator and direct call integration (`+91 90044 52071`).
+- 📱 **Dedicated Student App Showcase**: Highlighting live attendance and test mark tracking features.
+- 🎨 **Bespoke Design System**: Custom dark-navy `#0A1142` and electric cyan `#00D8FF` palette inspired by modern Vercel-grade aesthetics.
+- ❄️ **Reproducible Nix DevShell**: Fully isolated development environment with Node.js 22 via `flake.nix`.
 
 ---
 

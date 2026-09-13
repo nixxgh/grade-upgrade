@@ -6,13 +6,13 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://grade-upgrade.nixxgh.workers.dev',
   build: {
-    inlineStylesheets: 'always'
+    inlineStylesheets: 'always',
   },
   server: {
     host: true,
-    port: 4321
+    port: 4321,
   },
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
