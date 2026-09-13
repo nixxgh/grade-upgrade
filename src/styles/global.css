@@ -21,4 +21,6 @@ html {
   background-color: #0A1142;
   color: #FFFFFF;
   color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
