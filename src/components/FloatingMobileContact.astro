@@ -4,9 +4,10 @@
 <!-- Persistent Floating Mobile Quick-Contact Bar (Visible only on mobile/tablet) -->
 <aside
   aria-label="Quick Mobile Contact"
-  class="fixed bottom-[max(0.875rem,env(safe-area-inset-bottom))] left-3.5 right-3.5 z-40 md:hidden pointer-events-none"
+  class="fixed bottom-[max(0.875rem,env(safe-area-inset-bottom))] left-3.5 right-3.5 z-40 md:hidden pointer-events-none transform-gpu will-change-transform isolate"
+  style="-webkit-transform: translate3d(0, 0, 0); -webkit-backface-visibility: hidden; contain: layout paint;"
 >
-  <div class="max-w-md mx-auto pointer-events-auto rounded-2xl border border-[#00D8FF]/30 bg-[#0A1142]/90 backdrop-blur-xl p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.6)] flex items-center gap-2">
+  <div class="max-w-md mx-auto pointer-events-auto rounded-2xl border border-[#00D8FF]/30 bg-[#0A1142]/95 backdrop-blur-md p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.6)] flex items-center gap-2">
     <!-- Quick Call Button -->
     <a
       href="tel:+919004452071"
